@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caryat Car Care | Contact</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <div class="brand">
+      <a href="index.html"><img src="assets/logo.png" alt="Caryat Car Care logo"></a>
+    </div>
+    <nav class="navlinks" id="navlinks">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="call-btn" href="tel:+971500000000">Call Us <span class="call-full">&nbsp;·&nbsp;+971 50 000 0000</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="page-hero">
+    <div class="wrap">
+      <p class="kicker">Get in touch</p>
+      <h1>Let's get your car sorted.</h1>
+      <p>Drop by, call, or send an inquiry below and we'll get back to you with a straight answer — usually within the hour during workshop hours.</p>
+    </div>
+  </div>
+
+  <section class="contact-section">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div class="info-card contact-info-card">
+          <div class="card-head-row">
+            <div>
+              <p class="info-kicker">Workshop Location</p>
+              <h3>Visit Caryat Car Care</h3>
+            </div>
+            <span class="status-pill-open"><span class="live-dot-sm"></span>Open Today</span>
+          </div>
+
+          <div class="info-row">
+            <span class="info-icon"><i data-lucide="map-pin"></i></span>
+            <div class="info-body">
+              <b>Address</b>
+              <span>Al Quoz Industrial Area 3, Dubai, UAE</span>
+              <a class="map-link-btn" href="https://maps.google.com/?q=Al+Quoz+Industrial+Area+Dubai" target="_blank" rel="noopener">
+                Open in Google Maps &rarr;
+              </a>
+            </div>
+          </div>
+
+          <div class="map-wrapper">
+            <iframe
+              title="Caryat Car Care Location on Google Maps"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115598.63004077659!2d55.19706346914561!3d25.176466904128564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f696660144fbb%3A0x6a19f2868ef603bc!2sAl%20Quoz%20-%20Al%20Quoz%20Industrial%20Area%203%20-%20Dubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2sae!4v1700000000000!5m2!1sen!2sae"
+              width="100%"
+              height="180"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+
+          <div class="contact-channels-grid">
+            <div class="info-row">
+              <span class="info-icon"><i data-lucide="phone"></i></span>
+              <div><b>Call Direct</b><a class="contact-link" href="tel:+971500000000">+971 50 000 0000</a></div>
+            </div>
+            <div class="info-row">
+              <span class="info-icon"><i data-lucide="message-circle"></i></span>
+              <div><b>WhatsApp</b><a class="contact-link" href="https://wa.me/971500000000" target="_blank" rel="noopener">+971 50 000 0000</a></div>
+            </div>
+            <div class="info-row">
+              <span class="info-icon"><i data-lucide="mail"></i></span>
+              <div><b>Email</b><a class="contact-link" href="mailto:hello@caryatcarcare.example">hello@caryatcarcare.example</a></div>
+            </div>
+          </div>
+
+          <div class="hours-section">
+            <div class="hours-head">
+              <b>Operating Hours</b>
+            </div>
+            <ul class="hours-list">
+              <li><span>Monday – Friday</span><b>8:00 AM – 6:00 PM</b></li>
+              <li><span>Saturday</span><b>8:00 AM – 4:00 PM</b></li>
+              <li><span>Sunday</span><b class="text-closed">Closed</b></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <h3>Request a quotation</h3>
+          <p>Share your vehicle make, model and service requirement and we'll get back to you with a fair quotation at the earliest.</p>
+          <div class="form-success" id="formSuccess">Thanks — your inquiry has been received. We'll reach out shortly to confirm details.</div>
+          <form id="contactForm">
+            <div class="field-row">
+              <div class="field">
+                <label for="fname">Full name</label>
+                <input type="text" id="fname" name="name" required>
+              </div>
+              <div class="field">
+                <label for="fphone">Phone / WhatsApp number</label>
+                <input type="tel" id="fphone" name="phone" required>
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="fmake">Vehicle make</label>
+                <input type="text" id="fmake" name="make" placeholder="e.g. Toyota">
+              </div>
+              <div class="field">
+                <label for="fmodel">Vehicle model</label>
+                <input type="text" id="fmodel" name="model" placeholder="e.g. Camry 2020">
+              </div>
+            </div>
+            <div class="field">
+              <label for="fservice">Service required</label>
+              <select id="fservice" name="service">
+                <option value="">Select a service…</option>
+                <option>Car Maintenance &amp; Servicing</option>
+                <option>Diagnostics &amp; Mechanical Repairs</option>
+                <option>Car AC Service &amp; Repair</option>
+                <option>Tyres &amp; Batteries</option>
+                <option>Denting &amp; Painting</option>
+                <option>Car Window Tinting</option>
+                <option>Car Detailing &amp; Washing</option>
+                <option>Paint Protection Film (PPF)</option>
+                <option>Annual Registration Renewal &amp; Vehicle Passing</option>
+                <option>Vehicle Recovery &amp; Towing</option>
+                <option>Doorstep Car Care</option>
+                <option>Not sure — need advice</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="fmsg">Tell us more (optional)</label>
+              <textarea id="fmsg" name="message" rows="4" placeholder="e.g. Warning light on, car pulling to one side..."></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Inquiry</button>
+          </form>
+          <a id="waDirectBtn" class="btn-whatsapp" style="margin-top:14px;width:100%;justify-content:center;" href="https://wa.me/971500000000" target="_blank" rel="noopener">
+            Or message us directly on WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="Caryat Car Care">
+        <p class="footer-tagline">Your trusted workshop in Dubai.</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Caryat Car Care. All rights reserved.</span>
+      <span>Al Quoz Industrial Area, Dubai, UAE</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

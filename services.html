@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caryat Car Care | Services</title>
+<meta name="description" content="Trusted car care — routine car servicing, diagnostics, AC repair, detailing, tyres, PPF, registration renewal, recovery and towing, with transparent pricing approach.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <div class="brand">
+      <a href="index.html"><img src="assets/logo.png" alt="Caryat Car Care logo"></a>
+    </div>
+    <nav class="navlinks" id="navlinks">
+      <a href="index.html">Home</a>
+      <a href="services.html" aria-current="page">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="call-btn" href="tel:+971500000000">Call Us <span class="call-full">&nbsp;·&nbsp;+971 50 000 0000</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="page-hero">
+    <div class="wrap">
+      <p class="kicker">11 services &mdash; one workshop</p>
+      <h1>Everything your car needs, under one roof.</h1>
+      <p>From routine servicing to recovery and towing — see what's included below. Where we haven't listed a fixed price, just ask and we'll quote you fairly for your specific vehicle.</p>
+    </div>
+  </div>
+
+  <section style="padding:14px 0 0;">
+    <div class="wrap">
+      <div class="services-container">
+
+        <!-- Customer Convenience Toolbar: Search & Fast Filter Tabs -->
+        <div class="services-toolbar">
+          <div class="search-box-row">
+            <i data-lucide="search" class="search-icon"></i>
+            <input type="text" id="serviceSearchInput" class="service-search-input" placeholder="Search services (e.g. oil change, diagnostics, AC, tyres, towing, tint...)" aria-label="Search services">
+            <button id="searchClearBtn" class="search-clear-btn" aria-label="Clear search">&times;</button>
+          </div>
+          <div class="filter-pills" role="tablist" aria-label="Service categories">
+            <button class="filter-btn active" data-filter="all">All Services (11)</button>
+            <button class="filter-btn" data-filter="maintenance">Maintenance &amp; Diagnostics</button>
+            <button class="filter-btn" data-filter="repairs">Repairs &amp; AC</button>
+            <button class="filter-btn" data-filter="tyres">Tyres &amp; Detailing</button>
+            <button class="filter-btn" data-filter="body">Body, Paint &amp; Tint</button>
+            <button class="filter-btn" data-filter="assistance">Assistance &amp; Recovery</button>
+          </div>
+        </div>
+
+        <!-- No Results Fallback -->
+        <div id="servicesEmpty" class="services-empty">
+          <h4>No matching services found</h4>
+          <p>We couldn't find a service matching <span id="emptyQueryText"></span>. Need specialized help or advice?</p>
+          <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+            <a class="btn-whatsapp" href="https://wa.me/971500000000?text=Hi%20Caryat%20Car%20Care,%20I'm%20looking%20for%20a%20service%20for%20my%20car" target="_blank" rel="noopener">Inquire on WhatsApp</a>
+            <a class="call-btn" href="tel:+971500000000">Call Shop directly</a>
+          </div>
+        </div>
+
+        <!-- 1. Car Maintenance & Servicing -->
+        <article class="service-card blue" id="service-01" data-category="maintenance">
+          <div class="service-card-accent"></div>
+          <div class="service-card-body">
+            <div class="service-card-head">
+              <div class="service-title-group">
+                <div class="service-index-badge">
+                  <span class="badge-num">01</span>
+                  <span>Maintenance Package</span>
+                </div>
+                <h3>Car Maintenance &amp; Servicing</h3>
+              </div>
+              <div class="service-price-box">
+                <div class="price-pill-fixed">
+                  <span class="price-prefix">Starting from</span>
+                  <span class="price-val">AED 250</span>
+                </div>
+                <span class="price-disclaimer">Final price depends on vehicle make, model and service requirements.</span>
+              </div>
+            </div>
+
+            <p class="service-blurb highlight">Routine Car Service</p>
+            <ul class="service-checklist">
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>Engine oil and oil filter replacement</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>Air filter replacement</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>Cabin / AC filter replacement</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>Spark plug replacement</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>Fluid checks and top-ups</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>General vehicle inspection</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>Routine preventive maintenance</span>
+              </li>
+            </ul>
+
+            <div class="service-card-actions">
+              <a class="btn-card-quote" href="contact.html?service=Car+Maintenance+%26+Servicing">
+                Request Quotation &rarr;
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. Diagnostics & Mechanical Repairs -->
+        <article class="service-card red" id="service-02" data-category="maintenance repairs">
+          <div class="service-card-accent"></div>
+          <div class="service-card-body">
+            <div class="service-card-head">
+              <div class="service-title-group">
+                <div class="service-index-badge">
+                  <span class="badge-num">02</span>
+                  <span>Inspection &amp; Repairs</span>
+                </div>
+                <h3>Diagnostics &amp; Mechanical Repairs</h3>
+              </div>
+              <div class="service-price-box">
+                <div class="price-pill-inquire">Inquire for pricing</div>
+                <span class="price-disclaimer">Pricing depends on the vehicle, parts required and nature of the repair.</span>
+              </div>
+            </div>
+
+            <div class="service-subgroup">
+              <div class="service-subgroup-title">
+                <i data-lucide="monitor" class="subgroup-icon"></i>
+                Computer Diagnostics
+              </div>
+              <ul class="service-checklist">
+                <li>
+                  <i data-lucide="check" class="check-bullet"></i>
+                  <span>Full vehicle diagnostic scan</span>
+                </li>
+                <li>
+                  <i data-lucide="check" class="check-bullet"></i>
+                  <span>Warning light diagnosis</span>
+                </li>
+                <li>
+                  <i data-lucide="check" class="check-bullet"></i>
+                  <span>Fault-code identification</span>
+                </li>
+                <li>
+                  <i data-lucide="check" class="check-bullet"></i>
+                  <span>Electrical and electronic diagnostics</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="service-subgroup">
+              <div class="service-subgroup-title">
+                <i data-lucide="settings-2" class="subgroup-icon"></i>
+                Mechanical Repairs
+              </div>
+              <ul class="service-checklist">
+                <li>
+                  <i data-lucide="check" class="check-bullet"></i>
+                  <span>Engine-related repairs</span>
+                </li>
+                <li>
+                  <i data-lucide="check" class="check-bullet"></i>
+                  <span>Cooling system repairs</span>
+                </li>
+                <li>
+                  <i data-lucide="check" class="check-bullet"></i>
+                  <span>Brake system repairs</span>
+                </li>
+                <li>
+                  <i data-lucide="check" class="check-bullet"></i>
+                  <span>Suspension repairs</span>
+                </li>
+                <li>
+                  <i data-lucide="check" class="check-bullet"></i>
+                  <span>Steering repairs</span>
+                </li>
+                <li>
+                  <i data-lucide="check" class="check-bullet"></i>
+                  <span>Transmission-related repairs</span>
+                </li>
+                <li>
+                  <i data-lucide="check" class="check-bullet"></i>
+                  <span>General mechanical repairs</span>
+                </li>
+                <li>
+                  <i data-lucide="check" class="check-bullet"></i>
+                  <span>Replacement of faulty components and parts</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="service-card-actions">
+              <a class="btn-card-quote" href="contact.html?service=Diagnostics+%26+Mechanical+Repairs">
+                Request Quotation &rarr;
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. Car AC Service & Repair -->
+        <article class="service-card blue" id="service-03" data-category="repairs ac">
+          <div class="service-card-accent"></div>
+          <div class="service-card-body">
+            <div class="service-card-head">
+              <div class="service-title-group">
+                <div class="service-index-badge">
+                  <span class="badge-num">03</span>
+                  <span>Climate Control</span>
+                </div>
+                <h3>Car AC Service &amp; Repair</h3>
+              </div>
+              <div class="service-price-box">
+                <div class="price-pill-inquire">Inquire for pricing</div>
+              </div>
+            </div>
+
+            <ul class="service-checklist" style="margin-top:20px;">
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>AC inspection and diagnosis</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>AC gas recharge</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>AC system repairs</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>Cooling performance checks</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>AC component inspection and replacement</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>Diagnosis of AC cooling problems</span>
+              </li>
+            </ul>
+
+            <div class="service-card-actions">
+              <a class="btn-card-quote" href="contact.html?service=Car+AC+Service+%26+Repair">
+                Request Quotation &rarr;
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. Tyres & Batteries -->
+        <article class="service-card red" id="service-04" data-category="tyres repairs">
+          <div class="service-card-accent"></div>
+          <div class="service-card-body">
+            <div class="service-card-head">
+              <div class="service-title-group">
+                <div class="service-index-badge">
+                  <span class="badge-num">04</span>
+                  <span>Wheels &amp; Power</span>
+                </div>
+                <h3>Tyres &amp; Batteries</h3>
+              </div>
+              <div class="service-price-box">
+                <div class="price-pill-inquire">Inquire for pricing</div>
+                <span class="price-disclaimer">Tyre and battery prices vary depending on vehicle requirements and brand selected.</span>
+              </div>
+            </div>
+
+            <div class="service-subgroup">
+              <div class="service-subgroup-title">
+                <i data-lucide="circle-dot" class="subgroup-icon"></i>
+                Tyres
+              </div>
+              <ul class="service-checklist">
+                <li>
+                  <i data-lucide="check" class="check-bullet"></i>
+                  <span>Tyre replacement</span>
+                </li>
+                <li>
+                  <i data-lucide="check" class="check-bullet"></i>
+                  <span>Tyre inspection</span>
+                </li>
+                <li>
+                  <i data-lucide="check" class="check-bullet"></i>
+                  <span>Wheel balancing</span>
+                </li>
+                <li>
+                  <i data-lucide="check" class="check-bullet"></i>
+                  <span>Tyre-related services</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="service-subgroup">
+              <div class="service-subgroup-title">
+                <i data-lucide="battery-charging" class="subgroup-icon"></i>
+                Batteries
+              </div>
+              <ul class="service-checklist">
+                <li>
+                  <i data-lucide="check" class="check-bullet"></i>
+                  <span>Battery testing</span>
+                </li>
+                <li>
+                  <i data-lucide="check" class="check-bullet"></i>
+                  <span>Battery replacement</span>
+                </li>
+                <li>
+                  <i data-lucide="check" class="check-bullet"></i>
+                  <span>Battery-related assistance</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="service-card-actions">
+              <a class="btn-card-quote" href="contact.html?service=Tyres+%26+Batteries">
+                Request Quotation &rarr;
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5. Denting & Painting -->
+        <article class="service-card blue" id="service-05" data-category="body paint">
+          <div class="service-card-accent"></div>
+          <div class="service-card-body">
+            <div class="service-card-head">
+              <div class="service-title-group">
+                <div class="service-index-badge">
+                  <span class="badge-num">05</span>
+                  <span>Bodywork &amp; Paint</span>
+                </div>
+                <h3>Denting &amp; Painting</h3>
+              </div>
+              <div class="service-price-box">
+                <div class="price-pill-inquire">Inquire for pricing</div>
+                <span class="price-disclaimer">Final quotation provided after vehicle inspection.</span>
+              </div>
+            </div>
+
+            <ul class="service-checklist" style="margin-top:20px;">
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>Minor dent repair</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>Bodywork repairs</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>Panel repair</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>Paint correction</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>Partial / full panel painting</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>Accident and body damage repairs</span>
+              </li>
+            </ul>
+
+            <div class="service-card-actions">
+              <a class="btn-card-quote" href="contact.html?service=Denting+%26+Painting">
+                Request Quotation &rarr;
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 6. Car Window Tinting -->
+        <article class="service-card red" id="service-06" data-category="body tint">
+          <div class="service-card-accent"></div>
+          <div class="service-card-body">
+            <div class="service-card-head">
+              <div class="service-title-group">
+                <div class="service-index-badge">
+                  <span class="badge-num">06</span>
+                  <span>Solar &amp; UV Protection</span>
+                </div>
+                <h3>Car Window Tinting</h3>
+              </div>
+              <div class="service-price-box">
+                <div class="price-pill-inquire">Inquire for pricing</div>
+                <span class="price-disclaimer">Price depends on vehicle type and tint selected.</span>
+              </div>
+            </div>
+
+            <ul class="service-checklist" style="margin-top:20px;">
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>Automotive window tinting</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>Different tint options based on customer requirements</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>Professional installation</span>
+              </li>
+            </ul>
+
+            <div class="service-card-actions">
+              <a class="btn-card-quote" href="contact.html?service=Car+Window+Tinting">
+                Request Quotation &rarr;
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 7. Car Detailing & Washing -->
+        <article class="service-card blue" id="service-07" data-category="tyres detailing care">
+          <div class="service-card-accent"></div>
+          <div class="service-card-body">
+            <div class="service-card-head">
+              <div class="service-title-group">
+                <div class="service-index-badge">
+                  <span class="badge-num">07</span>
+                  <span>Shine &amp; Protection</span>
+                </div>
+                <h3>Car Detailing &amp; Washing</h3>
+              </div>
+              <div class="service-price-box">
+                <div class="price-pill-inquire">Inquire for pricing</div>
+                <span class="price-disclaimer">Packages can be offered based on vehicle size and condition.</span>
+              </div>
+            </div>
+
+            <div class="service-subgroup">
+              <div class="service-subgroup-title">
+                <i data-lucide="droplets" class="subgroup-icon"></i>
+                Car Washing
+              </div>
+              <ul class="service-checklist">
+                <li>
+                  <i data-lucide="check" class="check-bullet"></i>
+                  <span>Exterior wash</span>
+                </li>
+                <li>
+                  <i data-lucide="check" class="check-bullet"></i>
+                  <span>Interior cleaning</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="service-subgroup">
+              <div class="service-subgroup-title">
+                <i data-lucide="sparkles" class="subgroup-icon"></i>
+                Car Detailing
+              </div>
+              <ul class="service-checklist">
+                <li>
+                  <i data-lucide="check" class="check-bullet"></i>
+                  <span>Interior detailing</span>
+                </li>
+                <li>
+                  <i data-lucide="check" class="check-bullet"></i>
+                  <span>Exterior detailing</span>
+                </li>
+                <li>
+                  <i data-lucide="check" class="check-bullet"></i>
+                  <span>Deep cleaning</span>
+                </li>
+                <li>
+                  <i data-lucide="check" class="check-bullet"></i>
+                  <span>Paint enhancement</span>
+                </li>
+                <li>
+                  <i data-lucide="check" class="check-bullet"></i>
+                  <span>Polishing</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="service-card-actions">
+              <a class="btn-card-quote" href="contact.html?service=Car+Detailing+%26+Washing">
+                Request Quotation &rarr;
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 8. Paint Protection Film (PPF) -->
+        <article class="service-card red" id="service-08" data-category="body ppf care">
+          <div class="service-card-accent"></div>
+          <div class="service-card-body">
+            <div class="service-card-head">
+              <div class="service-title-group">
+                <div class="service-index-badge">
+                  <span class="badge-num">08</span>
+                  <span>Surface Defense</span>
+                </div>
+                <h3>Paint Protection Film (PPF)</h3>
+              </div>
+              <div class="service-price-box">
+                <div class="price-pill-inquire">Inquire for pricing</div>
+                <span class="price-disclaimer">Price depends on vehicle size and coverage selected.</span>
+              </div>
+            </div>
+
+            <ul class="service-checklist" style="margin-top:20px;">
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>PPF installation</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>Protection for selected vehicle panels</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>Partial vehicle protection</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>Full vehicle protection options</span>
+              </li>
+            </ul>
+
+            <div class="service-card-actions">
+              <a class="btn-card-quote" href="contact.html?service=Paint+Protection+Film+(PPF)">
+                Request Quotation &rarr;
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 9. Annual Registration Renewal & Vehicle Passing -->
+        <article class="service-card blue" id="service-09" data-category="assistance care">
+          <div class="service-card-accent"></div>
+          <div class="service-card-body">
+            <div class="service-card-head">
+              <div class="service-title-group">
+                <div class="service-index-badge">
+                  <span class="badge-num">09</span>
+                  <span>Compliance &amp; Passing</span>
+                </div>
+                <h3>Annual Registration Renewal &amp; Vehicle Passing</h3>
+              </div>
+              <div class="service-price-box">
+                <div class="price-pill-inquire">Inquire for pricing</div>
+                <span class="price-disclaimer">Renewal, testing and government-related fees are subject to applicable authority requirements and are not included unless specifically stated.</span>
+              </div>
+            </div>
+
+            <p class="service-blurb">Caryat can assist customers with their annual vehicle registration renewal and vehicle passing requirements, making the renewal process easier and more convenient.</p>
+
+            <div class="service-subgroup-title" style="margin-top:14px;">
+              Services include:
+            </div>
+            <ul class="service-checklist">
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>Vehicle inspection / passing coordination</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>Assistance with annual vehicle registration renewal</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>Coordination of required testing and related procedures</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>Vehicle renewal follow-up</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>Collection and delivery options, where applicable</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>Assistance with completing the renewal process</span>
+              </li>
+            </ul>
+
+            <div class="service-card-actions">
+              <a class="btn-card-quote" href="contact.html?service=Annual+Registration+Renewal+%26+Vehicle+Passing">
+                Request Quotation &rarr;
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 10. Vehicle Recovery & Towing -->
+        <article class="service-card red" id="service-10" data-category="assistance recovery">
+          <div class="service-card-accent"></div>
+          <div class="service-card-body">
+            <div class="service-card-head">
+              <div class="service-title-group">
+                <div class="service-index-badge">
+                  <span class="badge-num">10</span>
+                  <span>Emergency Assistance</span>
+                </div>
+                <h3>Vehicle Recovery &amp; Towing</h3>
+              </div>
+              <div class="service-price-box">
+                <div class="price-pill-inquire">Inquire for pricing</div>
+                <span class="price-disclaimer">Recovery charges depend on the vehicle type, location, distance and type of recovery required.</span>
+              </div>
+            </div>
+
+            <p class="service-blurb">Caryat can arrange vehicle recovery and towing services when a vehicle breaks down, is involved in an accident, or cannot be driven safely.</p>
+
+            <div class="service-subgroup-title" style="margin-top:14px;">
+              Services include:
+            </div>
+            <ul class="service-checklist">
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>Breakdown recovery</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>Vehicle towing</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>Accident recovery</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>Flat-tyre / non-drivable vehicle recovery</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>Recovery to the Caryat workshop</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>Recovery to another requested location</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>Emergency roadside recovery coordination</span>
+              </li>
+            </ul>
+
+            <div class="service-card-actions">
+              <a class="btn-card-quote" href="contact.html?service=Vehicle+Recovery+%26+Towing">
+                Request Quotation &rarr;
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 11. Doorstep Car Care -->
+        <article class="service-card blue" id="service-11" data-category="assistance doorstep care">
+          <div class="service-card-accent"></div>
+          <div class="service-card-body">
+            <div class="service-card-head">
+              <div class="service-title-group">
+                <div class="service-index-badge">
+                  <span class="badge-num">11</span>
+                  <span>Mobile Workshop</span>
+                </div>
+                <h3>Doorstep Car Care</h3>
+              </div>
+              <div class="service-price-box">
+                <div class="price-pill-inquire">Inquire for pricing</div>
+                <span class="price-disclaimer">Availability depends on location and service required.</span>
+              </div>
+            </div>
+
+            <p class="service-blurb">Selected Caryat services can be arranged at the customer's location, subject to the nature of the service.</p>
+
+            <div class="service-subgroup-title" style="margin-top:14px;">
+              Possible doorstep services include:
+            </div>
+            <ul class="service-checklist">
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>Battery replacement</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>Basic diagnostics</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>Minor maintenance</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>Vehicle inspection</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>Selected emergency / assistance services</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="check-bullet"></i>
+                <span>Other services where on-site work is practical</span>
+              </li>
+            </ul>
+
+            <div class="service-card-actions">
+              <a class="btn-card-quote" href="contact.html?service=Doorstep+Car+Care">
+                Request Quotation &rarr;
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="services-note">
+        Please do not assume a price beyond what's listed above — where a category shows <strong>"Inquire for pricing,"</strong> the final cost always depends on your specific vehicle and requirements. Send us your vehicle make, model and what you need, and we'll get back to you with a quotation.
+      </div>
+    </div>
+  </section>
+
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="Caryat Car Care">
+        <p class="footer-tagline">Your trusted workshop in Dubai.</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Caryat Car Care. All rights reserved.</span>
+      <span>Al Quoz Industrial Area, Dubai, UAE</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>
+
