@@ -70,7 +70,8 @@ header.site-nav{
   padding:10px 24px;max-width:1160px;margin:0 auto;
 }
 .brand{display:flex;align-items:center;gap:10px;}
-.brand img{height:42px;width:auto;}
+.brand img{height:42px;width:auto;filter:saturate(0.78) brightness(0.9);transition:filter .25s ease;}
+.brand:hover img{filter:saturate(1) brightness(1);}
 .navlinks{display:flex;align-items:center;gap:4px;}
 .navlinks a{
   padding:8px 14px;
@@ -147,16 +148,15 @@ main{
 /* ---------- HERO (home) ---------- */
 .hero{
   position:relative;overflow:hidden;
-  background:var(--ink);
+  background:
+    linear-gradient(to right, rgba(14,15,18,0.92) 0%, rgba(14,15,18,0.65) 55%, rgba(10,86,175,0.30) 100%),
+    url('../assets/hero-bg.jpg') center center / cover no-repeat;
   color:#fff;
-}
-.hero-stripes{
-  position:absolute;inset:0;z-index:0;pointer-events:none;
 }
 .hero-inner{
   position:relative;z-index:2;
   max-width:1160px;margin:0 auto;padding:36px 24px 72px;
-  display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;
+  display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:start;
 }
 .eyebrow-plain{
   font-family:var(--font-display);font-size:11.5px;font-weight:700;color:#FF6A6E;
@@ -208,6 +208,7 @@ main{
 
 .hero-badge{
   position:relative;z-index:2;
+  align-self:center;
   background:var(--surface);
   border-radius:10px;
   padding:0;
@@ -394,6 +395,67 @@ section{padding:56px 0;}
 }
 .service-card-link:hover{transform:translateX(3px);}
 
+/* ---------- TRUST SECTION ---------- */
+.trust-section{
+  background:var(--ink);color:#fff;
+  padding:72px 0;
+}
+.trust-layout{
+  display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;
+}
+.trust-left .kicker{
+  font-family:var(--font-display);font-size:11px;font-weight:700;
+  letter-spacing:0.1em;text-transform:uppercase;color:var(--red);margin:0 0 14px;
+}
+.trust-left h2{
+  font-family:var(--font-display);font-size:clamp(26px,3.2vw,40px);font-weight:800;
+  letter-spacing:-0.03em;line-height:1.1;margin:0 0 40px;color:#fff;
+}
+.trust-stats{
+  display:grid;grid-template-columns:1fr 1fr;gap:2px;
+  border:1px solid #2B2D33;border-radius:8px;overflow:hidden;
+}
+.trust-stat{
+  padding:20px 22px;background:#17181C;
+  border-right:1px solid #2B2D33;border-bottom:1px solid #2B2D33;
+}
+.trust-stat:nth-child(2n){border-right:none;}
+.trust-stat:nth-child(n+3){border-bottom:none;}
+.trust-stat b{
+  display:block;font-family:var(--font-display);font-size:26px;font-weight:800;
+  letter-spacing:-0.035em;color:var(--blue);line-height:1;margin-bottom:4px;
+}
+.trust-stat span{
+  font-size:12px;color:#7B7F8A;font-weight:500;line-height:1.4;
+}
+
+.trust-pillars{
+  display:flex;flex-direction:column;gap:0;
+  border:1px solid #2B2D33;border-radius:8px;overflow:hidden;
+}
+.trust-pillar{
+  display:flex;gap:20px;align-items:flex-start;
+  padding:22px 24px;background:#17181C;
+  border-bottom:1px solid #2B2D33;
+  transition:background .25s ease;
+}
+.trust-pillar:last-child{border-bottom:none;}
+.trust-pillar:hover{background:#1C1D22;}
+.trust-pillar-num{
+  font-family:var(--font-display);font-size:13px;font-weight:800;
+  color:var(--blue);letter-spacing:-0.01em;
+  background:rgba(10,86,175,.15);
+  min-width:36px;height:36px;border-radius:6px;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.trust-pillar-body h3{
+  font-family:var(--font-display);font-size:15.5px;font-weight:700;
+  letter-spacing:-0.02em;margin:0 0 5px;color:#fff;line-height:1.2;
+}
+.trust-pillar-body p{
+  font-size:13.5px;line-height:1.6;color:#8A8D97;margin:0;
+}
+
 /* ---------- CTA BANNER ---------- */
 .cta-banner{
   background:var(--ink);color:#fff;
@@ -430,8 +492,11 @@ section{padding:56px 0;}
 
 /* ---------- PAGE HERO (services / contact) ---------- */
 .page-hero{
-  background:var(--ink);color:#fff;
-  padding:24px 0 20px;
+  background:
+    linear-gradient(to right, rgba(14,15,18,0.93) 0%, rgba(14,15,18,0.75) 60%, rgba(10,86,175,0.25) 100%),
+    url('assets/hero-bg.jpg') center 40% / cover no-repeat;
+  color:#fff;
+  padding:32px 0 28px;
   border-bottom:1px solid rgba(255,255,255,.07);
 }
 .page-hero .kicker{
@@ -920,6 +985,8 @@ footer{
   .field-row{grid-template-columns:1fr;}
   section{padding:38px 0;}
   .contact-section{padding:20px 0 44px;}
+  .trust-layout{grid-template-columns:1fr;gap:40px;}
+  .trust-section{padding:48px 0;}
 }
 @media (max-width:640px){
   .navlinks{display:none;}
@@ -935,6 +1002,7 @@ footer{
   .cta-banner-content{flex-direction:column;align-items:stretch;gap:14px;}
   .btn-cta-dark{text-align:center;width:100%;}
   .section-head-flex{flex-direction:column;align-items:flex-start;}
+  .trust-stats{grid-template-columns:1fr 1fr;}
 }
 
 @keyframes slideDownNav {
